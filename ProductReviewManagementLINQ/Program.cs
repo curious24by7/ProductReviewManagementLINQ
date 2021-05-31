@@ -38,8 +38,19 @@ namespace ProductReviewManagementLINQ
                 productReviews.Add(new ProductReview() { productId = 5, userId = 1, rating = 5, isLike = "Yes", review = "Awesome" });
                 productReviews.Add(new ProductReview() { productId = 9, userId = 1, rating = 5, isLike = "Yes", review = "Does the work" });
             }
+            Console.WriteLine("##################################################");
             //UC2
             Manage.GetTop3HighestRatedRecords(productReviews);
+            Console.WriteLine("##################################################");
+            //UC3
+            Manage.RatingGreaterThan3(productReviews);
+            Console.WriteLine("##################################################");
+            //UC4
+            Manage.CountforeachProductId(productReviews);
+            Console.WriteLine("##################################################");
+            //UC5
+            Manage.RetrieveProductID(productReviews);
+            Console.WriteLine("##################################################");
         }
     }
 }
