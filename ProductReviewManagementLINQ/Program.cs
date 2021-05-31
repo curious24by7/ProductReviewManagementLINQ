@@ -51,6 +51,8 @@ namespace ProductReviewManagementLINQ
             //UC5
             Manage.RetrieveProductID(productReviews);
             Console.WriteLine("##################################################");
+            //UC6
+            Manage.SkipTopFive(productReviews);
         }
     }
 }

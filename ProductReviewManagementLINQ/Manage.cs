@@ -68,5 +68,19 @@ namespace ProductReviewManagementLINQ
             }
             return outputList;
         }
+        //UC6
+        public static ArrayList SkipTopFive(List<ProductReview> productReviews)
+        {
+            ArrayList outputList = new ArrayList();
+            var records = (from rec in productReviews
+                           orderby rec.rating descending
+                           select rec);
+            foreach (var element in records.Skip(5))
+            {
+                Console.WriteLine(element.ToString());
+                outputList.Add(element.ToString());
+            }
+            return outputList;
+        }
     }
 }
